@@ -1,5 +1,3 @@
-#!/usr/bin/env python2.7
-#
 # msaparser - Parsing clustal file for sequence variation analysis
 #
 # Copyright (C) 2013, Jian-Long Huang
