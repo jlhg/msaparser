@@ -7,7 +7,7 @@ Parsing clustal file for sequence variation analysis
 ```python
 import msaparser
 
-parser = msaparser.Parse()
+parser = msaparser.Parse(blockstar=0.9, blocklen=10, checknum=5)
 parser.parse('protein_sequences.clustal', 'a')
 parser.block  # the list of parsed blocks
 parser.mutnum  # the number of point mutation
