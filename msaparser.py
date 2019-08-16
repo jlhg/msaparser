@@ -80,7 +80,7 @@ class Parser(object):
                 if line == '':
                     # end of file
                     break
-                elif line == '\n':
+                elif line == '\n' or line == '\r\n' or line == '\r':
                     continue
                 else:
                     self._ss.parse(line)
@@ -233,7 +233,7 @@ class _CluStar(object):
         self.count = [0]
 
     def parse(self, line, linelength):
-        line = line.rstrip('\n')
+        line = line.rstrip('\n').rstrip('\r')
         self.blank = line[0: len(line) - linelength]
         self._base = self._base + list(line[len(line) - linelength:len(line)])
 
