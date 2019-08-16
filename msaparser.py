@@ -133,7 +133,7 @@ class Parser(object):
             return None
 
         html = []
-        html.append('<div class="%s">' % (self.htmltag.get('clustal')))
+        html.append('<div class="%s" style="font-family:monospace">' % (self.htmltag.get('clustal')))
         html.append(self._title.get_html())
         html.append('<br><br>')
 
